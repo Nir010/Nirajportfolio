@@ -165,26 +165,37 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div className="space-y-6">
-          <div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance leading-tight">
-              Niraj Adhakari
-            </h1>
-            <p className="text-xl text-muted-foreground mt-2">BCA Student @ Schemes College</p>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance leading-tight">
+                Niraj Adhakari
+              </h1>
+              <p className="text-xl text-muted-foreground mt-2">BCA Student @ Schemes College</p>
+            </div>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Passionate computer applications developer focused on building efficient, scalable web applications and software solutions. I combine strong problem-solving skills with modern web technologies to create impactful digital experiences.
+            </p>
+            <div className="flex gap-4 pt-4">
+              <Link href="mailto:your.email@example.com">
+                <Button className="gap-2">
+                  <Mail size={18} />
+                  Get in Touch
+                </Button>
+              </Link>
+              <Link href="#projects">
+                <Button variant="outline">View My Work</Button>
+              </Link>
+            </div>
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Passionate computer applications developer focused on building efficient, scalable web applications and software solutions. I combine strong problem-solving skills with modern web technologies to create impactful digital experiences.
-          </p>
-          <div className="flex gap-4 pt-4">
-            <Link href="mailto:your.email@example.com">
-              <Button className="gap-2">
-                <Mail size={18} />
-                Get in Touch
-              </Button>
-            </Link>
-            <Link href="#projects">
-              <Button variant="outline">View My Work</Button>
-            </Link>
+          <div className="flex justify-center md:justify-end">
+            <div className="relative w-80 h-80 rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="/placeholder-user.jpg"
+                alt="Niraj Adhakari"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
