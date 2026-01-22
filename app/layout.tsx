@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Niraj Adhikari',
+  title: 'Niraj Adhikari | Portfolio',
   description: 'Professional portfolio of a BCA student from Schemes College showcasing projects, skills, and experience in computer applications',
   generator: 'v0.app',
   icons: {
