@@ -332,18 +332,7 @@ export default function Portfolio() {
                 <Linkedin size={20} />
               </Button>
             </Link>
-            <Link href="mailto:your.email@example.com">
-              <Button variant="outline" size="icon">
-                <Mail size={20} />
-              </Button>
-            </Link>
-          </div>
-          <Link href="mailto:your.email@example.com">
-            <Button className="gap-2">
-              <Mail size={18} />
-              Send me an email
-            </Button>
-          </Link>
+            
         </div>
       </section>
 
