@@ -348,11 +348,63 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© 2024 Niraj Adhakari. All rights reserved. | Schemes College BCA Student</p>
-        </div>
-      </footer>
+<footer class="site-footer" id="contact">
+  <div class="container contact-section">
+    <h2>Send me an email</h2>
+
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/meeljaoj"
+      method="POST"
+      aria-label="Contact form"
+    >
+      <label for="contact-email">
+        Your email
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+        />
+      </label>
+
+      <label for="contact-message">
+        Your message
+        <textarea
+          id="contact-message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Hi — I'd like to get in touch about..."
+        ></textarea>
+      </label>
+
+      <!-- Hidden field to set email subject and a simple honeypot anti-spam field -->
+      <input type="hidden" name="_subject" value="New message from portfolio" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <button type="submit" class="btn">Send</button>
+
+      <p class="form-note">Thanks — I’ll reply as soon as I can.</p>
+      <p class="form-credit" aria-hidden="true">Form added by GitHub Copilot (@copilot)</p>
+    </form>
+  </div>
+
+  <style>
+    /* Minimal styling — extract to your CSS file if preferred */
+    .site-footer { padding: 3rem 1rem; background:#0f1724; color:#e6eef8; }
+    .contact-section { max-width:800px; margin:0 auto; }
+    .contact-form { display:flex; flex-direction:column; gap:.75rem; }
+    .contact-form label { display:flex; flex-direction:column; font-size:0.95rem; }
+    .contact-form input[type="email"],
+    .contact-form textarea { padding:.6rem; border-radius:6px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.03); color:inherit; }
+    .btn { margin-top:.5rem; padding:.6rem .9rem; border-radius:6px; border:none; background:#06b6d4; color:#012; font-weight:600; cursor:pointer; }
+    .btn:hover { opacity:.95; }
+    .form-note { margin-top:.5rem; font-size:.9rem; color:rgba(230,238,248,.85); }
+    .form-credit { margin-top:.25rem; font-size:.8rem; color:rgba(230,238,248,.6); }
+  </style>
+</footer>
     </main>
   )
 }
