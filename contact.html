@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Send me a message</title>
+  <style>
+    /* Basic page reset and spacing so footer won't cover content */
+    html,body { height:100%; margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111; }
+    main { padding:24px; max-width:960px; margin:0 auto; }
+    /* Ensure page content isn't hidden behind the fixed footer */
+    body { padding-bottom:180px; }
+
+    /* Footer contact styling */
+    .footer-contact {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #f8f9fb;
+      border-top: 1px solid #e1e6ea;
+      box-shadow: 0 -6px 20px rgba(16,24,40,0.04);
+      padding: 18px 12px;
+      z-index: 1000;
+    }
+    .footer-contact .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      color:#0b2447;
+      flex: 1 1 160px;
+      min-width: 200px;
+    }
+
+    .footer-contact form {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex: 2 1 560px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact label {
+      display: flex;
+      flex-direction: column;
+      gap:6px;
+      flex: 1 1 220px;
+      min-width: 160px;
+      font-size: 13px;
+      color:#223;
+    }
+
+    .footer-contact input[type="email"],
+    .footer-contact textarea {
+      padding: 8px 10px;
+      border: 1px solid #cfd8df;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #fff;
+      box-sizing: border-box;
+      width: 100%;
+      resize: vertical;
+      min-height: 40px;
+    }
+
+    .footer-contact textarea { min-height: 64px; }
+
+    .footer-contact .actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .footer-contact button[type="submit"] {
+      background: #0b5cff;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .footer-contact button[type="submit"]:hover { opacity: 0.95; }
+
+    @media (max-width: 720px) {
+      .footer-contact .wrap { padding: 0 8px; }
+      .footer-contact h2 { width:100%; }
+      .footer-contact form { width:100%; }
+      body { padding-bottom:220px; } /* allow more space on small screens */
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Welcome</h1>
+    <p>Page content goes here. The contact form ("Send me a message") is anchored to the bottom of the page.</p>
+  </main>
+
+  <!-- Footer fixed to bottom with the contact form -->
+  <footer class="footer-contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <h2 id="contact-heading">Send me a message</h2>
+
+      <!-- modify this form HTML and place wherever you want your form -->
+      <form
+        action="https://formspree.io/f/meeljaoj"
+        method="POST"
+        aria-label="Contact form"
+      >
+        <label>
+          Your email:
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label style="flex:2 1 360px;">
+          Your message:
+          <textarea name="message" placeholder="Write your message..." required></textarea>
+        </label>
+
+        <!-- Optional: add a subject or other fields here -->
+        <div class="actions">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </footer>
+</body>
+</html>
