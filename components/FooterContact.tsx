@@ -79,7 +79,7 @@ export default function FooterContact() {
           </p>
 
           <p className="form-credit" aria-hidden="true" style={{ marginTop: '.25rem', fontSize: '.8rem', color: 'rgba(230,238,248,.6)' }}>
-            Form added by GitHub Copilot (@copilot)
+            Form added by Niraj
           </p>
         </form>
       </div>
