@@ -341,5 +341,5 @@ export default function Portfolio() {
 <FooterContact />
 
 </main>
-  )
+  );
 }
