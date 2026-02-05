@@ -335,11 +335,11 @@ export default function Portfolio() {
             </Link>
             
         </div>
-      </section>
+   </section>
 
-      {/* Footer */}
 {/* Footer */}
 <FooterContact />
-    </main>
+
+</main>
   )
 }
